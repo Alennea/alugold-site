@@ -2426,34 +2426,4 @@ input, select, textarea {
 				padding: 3em 0 1em 0;
 			}
 
-
-		/* ===== ZEROFOUR LOGO HARD FIX ===== */
-
-/* a logo container ne legyen 100% széles */
-#logo {
-    width: auto !important;
-    display: inline-block !important;
-}
-
-/* a h1 ne tolja szét */
-#logo h1 {
-    margin: 0 !important;
-    padding: 0 !important;
-    font-size: 0 !important;   /* ez megöli a template font-size hackjét */
-}
-
-/* a link se legyen block full width */
-#logo a {
-    display: inline-block !important;
-}
-
-/* maga a kép */
-#logo img {
-    height: 55px !important;
-    width: auto !important;
-    max-width: none !important;
-    display: block;
-}
-	
-
 	}
