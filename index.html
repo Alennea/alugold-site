@@ -6,9 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* --- HOZZÁADOTT STÍLUSOK --- */
-			
-			/* Főkép és szürke overlay */
+			/* Háttérkép és sötétítő overlay */
 			#header-wrapper {
 				position: relative;
 				background: url('images/main_picture.png') no-repeat center center;
@@ -26,42 +24,10 @@
 			}
 			#header-wrapper .container {
 				position: relative;
-				z-index: 2; /* Hogy a szöveg az overlay felett legyen */
+				z-index: 2; /* Hogy a tartalom az overlay felett maradjon */
 			}
 
-			/* Logo és Navbar szép egyvonalas elrendezése */
-			#header .inner {
-				display: flex;
-				align-items: center; /* Függőlegesen középre igazítja a logót és a navot */
-				justify-content: space-between; /* A logó balra, a nav jobbra kerül */
-				flex-wrap: wrap; /* Hogy kisebb képernyőn ne folyjon ki a képből */
-			}
-			
-			/* Logó beállításai */
-			#header h1 {
-				margin: 0;
-				padding: 0;
-			}
-			h1 a#logo {
-				background: url('images/logo_new_white.png') no-repeat left center;
-				background-size: contain;
-				display: block;
-				width: 250px; 
-				height: 60px;
-				text-indent: -9999px; /* Eltünteti a ZeroFour feliratot */
-				border: none;
-			}
-			
-			/* Navbar finomhangolása (felülírja a sablon alapjait) */
-			#header #nav {
-				margin: 0; /* Sablon eredeti margójának törlése */
-				padding: 5px 0; /* 5-5px padding alul és felül */
-				position: relative;
-				top: auto; /* Törli az eredeti abszolút pozíciót */
-				right: auto;
-			}
-
-			/* Széchenyi logó a sarokba */
+			/* Széchenyi logó a jobb alsó sarokba */
 			.mologo {
 				position: fixed;
 				bottom: 0;
@@ -76,26 +42,6 @@
 				max-width: 300px;
 				height: auto;
 			}
-			
-			/* Mobil nézet javítása (összecsúszás ellen) */
-			@media (max-width: 980px) {
-				#header .inner {
-					flex-direction: column;
-					justify-content: center;
-					padding-top: 20px;
-				}
-				h1 a#logo {
-					margin: 0 auto 15px auto;
-					background-position: center center; /* Mobilon középre a logó */
-				}
-				#header #nav {
-					padding: 5px 0;
-					margin: 0 auto;
-				}
-				.mologo img {
-					max-width: 180px;
-				}
-			}
 		</style>
 	</head>
 	<body class="homepage is-preload">
@@ -107,7 +53,7 @@
 						<header id="header">
 								<div class="inner">
 
-									<h1><a href="index.html" id="logo">ZeroFour</a></h1>
+									<h1><a href="index.html" id="logo">ALUGOLD</a></h1>
 
 									<nav id="nav">
 											<ul>
