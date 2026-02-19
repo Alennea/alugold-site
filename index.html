@@ -6,36 +6,79 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* 4K Háttérkép beállítása a fejlécbe */
+			/* FŐ HÁTTÉRKÉP beállítása */
 			#header-wrapper {
-				background-image: url('http://googleusercontent.com/image_generation_content/9');
+				background-image: url('images/main_picture.jpg'); /* Figyelj a kiterjesztésre (.jpg vagy .png)! */
 				background-size: cover;
 				background-position: center;
+				position: relative;
+			}
+			/* Sötétítő réteg, hogy a fehér szöveg olvasható legyen */
+			#header-wrapper::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.5); /* Félig átlátszó fekete réteg */
+				z-index: 1;
+			}
+			/* A tartalom legyen a sötétítő réteg felett */
+			#header-wrapper .container {
+				position: relative;
+				z-index: 2;
+			}
+
+			/* LOGÓ BEÁLLÍTÁSA a bal felső sarokban */
+			#logo img {
+				height: 60px; /* Vagy amekkora méret jól mutat */
+				width: auto;
+				display: block;
+			}
+			h1#logo {
+				border: none; /* Eltüntetjük a sablon eredeti keretét */
+				text-indent: -9999px; /* Eltüntetjük a "ZeroFour" szöveget */
+				background: url('images/logo_new_white.png') no-repeat left center;
+				background-size: contain;
+				width: 200px; /* A logó szélességéhez igazítva */
+				height: 60px;
+				margin-top: 10px;
+			}
+			h1#logo a {
+				display: block;
+				width: 100%;
+				height: 100%;
 			}
 			
+			/* BANNER SZÖVEG KÖZÉPRE IGAZÍTÁSA */
+			#banner h2, #banner p {
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			#banner p {
+				max-width: 800px; /* Hogy ne folyjon szét nagyon szélesre */
+			}
+
 			/* Széchenyi Terv lebegő logó - TELJESEN A SAROKBAN */
 			.mologo {
-			    bottom: 0px;  /* Nulla távolság az aljától */
-			    right: 0px;   /* Nulla távolság a jobb szélétől */
-			    z-index: 999;
-			    position: fixed;
-			    background: transparent; 
-			    line-height: 0; /* Megszünteti a kép alatti láthatatlan hézagot */
-			    margin: 0;
-			    padding: 0;
+				bottom: 0px;
+				right: 0px;
+				z-index: 999;
+				position: fixed;
+				background: transparent;
+				line-height: 0;
+				margin: 0;
+				padding: 0;
 			}
-			
 			.mologo img {
-			    display: block;
-			    max-width: 300px;
-			    height: auto;
-			    /* Ha a képen magán van fehér keret, akkor ide tehetünk egy kis negatív margót: */
-			    /* margin-bottom: -5px; */
-			    /* margin-right: -5px; */
+				display: block;
+				max-width: 300px;
+				height: auto;
 			}
-			
 			@media (max-width: 736px) {
-			    .mologo img { max-width: 180px; }
+				.mologo img { max-width: 180px; }
 			}
 		</style>
 	</head>
@@ -48,7 +91,7 @@
 						<header id="header">
 								<div class="inner">
 
-									<h1><a href="index.html" id="logo">ALUGOLD</a></h1>
+									<h1 id="logo"><a href="index.html">ALUGOLD</a></h1>
 
 									<nav id="nav">
 											<ul>
@@ -97,73 +140,7 @@
 										</div>
 										<div class="col-4 col-12-medium">
 											<section>
-												<span class="image featured"><img src="http://googleusercontent.com/image_generation_content/9" alt="Szaktanácsadás" /></span>
-												<header class="second icon solid fa-user">
-													<h3>Szaktanácsadás</h3>
-													<p>Személyre szabott megoldások</p>
-												</header>
-											</section>
-										</div>
-										<div class="col-4 col-12-medium">
-											<section>
-												<span class="image featured"><img src="http://googleusercontent.com/image_generation_content/8" alt="Beépítés" /></span>
-												<header class="second icon solid fa-cog">
-													<h3>Precíz beépítés</h3>
-													<p>Garanciális szakmunka</p>
-												</header>
-											</section>
-										</div>
-										<div class="col-4 col-12-medium">
-											<section>
-												<span class="image featured"><img src="http://googleusercontent.com/image_generation_content/5" alt="Termékek" /></span>
-												<header class="second icon solid fa-award">
-													<h3>Prémium minőség</h3>
-													<p>A legjobb alapanyagok</p>
-												</header>
-											</section>
-										</div>
-										<div class="col-12">
-											<p>Az Alugold Kft. fő profilja a modern, magas hőszigetelésű alumínium és műanyag nyílászárók forgalmazása és beépítése. Szekszárdi telephelyünkről indulva az egész ország területén vállalunk munkákat, legyen szó családi házakról vagy ipari létesítményekről.</p>
-										</div>
-									</div>
-								</section>
-
-						</div>
-					</div>
-					
-					<div class="wrapper style2">
-						<div class="inner">
-								<section class="container box feature2">
-									<div class="row">
-										<div class="col-6 col-12-medium">
-											<section>
-												<header class="major">
-													<h2>Alumínium rendszerek</h2>
-													<p>Elegancia és örök élettartam</p>
-												</header>
-												<p>Az alumínium nyílászárók a modern építészet csúcsát képviselik. Rendkívüli stabilitásuk révén hatalmas üvegfelületek kialakítását teszik lehetővé, miközben hőszigetelésük eléri a passzívházak szintjét.</p>
-												<footer>
-													<a href="#" class="button medium icon solid fa-arrow-circle-right">Részletek</a>
-												</footer>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<header class="major">
-													<h2>Műanyag ablakok</h2>
-													<p>Kiváló ár-érték arány</p>
-												</header>
-												<p>Többkamrás, prémium profilrendszereink garantálják a csendet és a meleget otthonában. Könnyű kezelhetőség és minimális karbantartási igény jellemzi termékeinket.</p>
-												<footer>
-													<a href="#" class="button medium alt icon solid fa-info-circle">Érdekel</a>
-												</footer>
-											</section>
-										</div>
-									</div>
-								</section>
-							</div>
-					</div>
-				</div>
+												<span class="image featured"><img src="http://googleusercontent.com/image_generation_content/9
 
 			<div id="footer-wrapper">
 					<footer id="footer" class="container">
@@ -234,5 +211,6 @@
 
 	</body>
 </html>
+
 
 
