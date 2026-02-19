@@ -2425,19 +2425,35 @@ input, select, textarea {
 				margin-top: 0;
 				padding: 3em 0 1em 0;
 			}
-		/* Logo kép a helyére */
-			/* A template szétszedésének megakadályozása */
-			#header h1 {
-			  margin: 0;
-			}
-			
-			#logo {
-			  display: inline-block;
-			}
-			
-			#logo img {
-			  height: 55px;   /* itt állítod a méretet */
-			  width: auto;
-			  display: block;
-			}
+		/* ===== LOGO FIX ===== */
+
+		/* a h1 margin törlése */
+		#header h1 {
+		    margin: 0;
+		    padding: 0;
+		}
+		
+		/* a template blokkos logójának override */
+		#logo {
+		    display: inline-block;
+		    border: 0;
+		}
+		
+		/* a tényleges logó kép mérete */
+		#logo img {
+		    height: 55px;     /* itt állítod a méretet */
+		    width: auto;
+		    display: block;
+		}
+		
+		/* ha a header középre rakná */
+		#header .inner {
+		    text-align: left;
+		}
+		
+		#header .inner {
+	    display: flex;
+	    align-items: center;
+		}	
+
 	}
