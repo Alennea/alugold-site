@@ -1,76 +1,67 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>ALUGOLD - Nyílászárók és Árnyékolástechnika</title>
+		<title>ALUGOLD - Minőségi Nyílászárók</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* FŐ HÁTTÉRKÉP beállítása */
+			/* 1. FŐ HÁTTÉRKÉP BEÁLLÍTÁSA */
 			#header-wrapper {
-				background-image: url('images/main_picture.jpg'); /* Figyelj a kiterjesztésre (.jpg vagy .png)! */
+				background-image: url('images/main_picture.png'); /* Ha .png a fájl, írd át arra! */
 				background-size: cover;
 				background-position: center;
 				position: relative;
 			}
-			/* Sötétítő réteg, hogy a fehér szöveg olvasható legyen */
-			#header-wrapper::after {
+			/* Sötétítő réteg a fejléc alá, hogy olvasható legyen a fehér szöveg */
+			#header-wrapper:before {
 				content: '';
 				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: rgba(0, 0, 0, 0.5); /* Félig átlátszó fekete réteg */
+				top: 0; left: 0; width: 100%; height: 100%;
+				background: rgba(0, 0, 0, 0.4);
 				z-index: 1;
 			}
-			/* A tartalom legyen a sötétítő réteg felett */
 			#header-wrapper .container {
 				position: relative;
 				z-index: 2;
 			}
 
-			/* LOGÓ BEÁLLÍTÁSA a bal felső sarokban */
-			#logo img {
-				height: 60px; /* Vagy amekkora méret jól mutat */
-				width: auto;
-				display: block;
-			}
+			/* 2. LOGÓ BEÁLLÍTÁSA (Bal felső sarok) */
 			h1#logo {
-				border: none; /* Eltüntetjük a sablon eredeti keretét */
-				text-indent: -9999px; /* Eltüntetjük a "ZeroFour" szöveget */
 				background: url('images/logo_new_white.png') no-repeat left center;
 				background-size: contain;
-				width: 200px; /* A logó szélességéhez igazítva */
-				height: 60px;
-				margin-top: 10px;
+				width: 250px;
+				height: 80px;
+				text-indent: -9999px; /* Eltünteti a ZeroFour szöveget */
+				border: none;
+				margin: 0;
 			}
 			h1#logo a {
 				display: block;
 				width: 100%;
 				height: 100%;
 			}
-			
-			/* BANNER SZÖVEG KÖZÉPRE IGAZÍTÁSA */
-			#banner h2, #banner p {
+
+			/* 3. SZÖVEGEK KÖZÉPRE IGAZÍTÁSA */
+			#banner {
 				text-align: center;
+			}
+			#banner h2, #banner p {
 				margin-left: auto;
 				margin-right: auto;
-			}
-			#banner p {
-				max-width: 800px; /* Hogy ne folyjon szét nagyon szélesre */
+				text-align: center;
 			}
 
-			/* Széchenyi Terv lebegő logó - TELJESEN A SAROKBAN */
+			/* 4. EU LOGÓ FIXÁLÁSA A SAROKBA */
 			.mologo {
 				bottom: 0px;
 				right: 0px;
 				z-index: 999;
 				position: fixed;
-				background: transparent;
 				line-height: 0;
 				margin: 0;
 				padding: 0;
+				background: transparent;
 			}
 			.mologo img {
 				display: block;
@@ -116,9 +107,7 @@
 							</header>
 
 						<div id="banner">
-								<h2><strong>ALUGOLD:</strong> Minőség és elegancia
-								<br />
-								Alumínium és műanyag nyílászárók professzionális beépítéssel.</h2>
+								<h2><strong>ALUGOLD:</strong> Minőség és elegancia</h2>
 								<p>Több mint 20 év tapasztalatával segítünk otthona hőszigetelésében.</p>
 								<a href="kapcsolat.html" class="button large icon solid fa-envelope">Kérjen árajánlatot</a>
 							</div>
@@ -129,64 +118,75 @@
 			<div id="main-wrapper">
 					<div class="wrapper style1">
 						<div class="inner">
-
-							<section class="container box feature1">
+								<section class="container box feature1">
 									<div class="row">
 										<div class="col-12">
 											<header class="first major">
-												<h2>Miért válassza az Alugoldot?</h2>
-												<p>Cégünk elkötelezett a <strong>hosszú távú minőség</strong> és a vevőelégedettség mellett.</p>
+												<h2>Professzionális nyílászáró megoldások</h2>
+												<p>Szekszárdi központtal, országos lefedettséggel.</p>
 											</header>
 										</div>
 										<div class="col-4 col-12-medium">
 											<section>
-												<span class="image featured"><img src="http://googleusercontent.com/image_generation_content/9
+												<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+												<header class="second icon solid fa-user">
+													<h3>Szaktanácsadás</h3>
+													<p>Személyre szabott felmérés</p>
+												</header>
+											</section>
+										</div>
+										<div class="col-4 col-12-medium">
+											<section>
+												<span class="image featured"><img src="images/pic02.jpg" alt="" /></span>
+												<header class="second icon solid fa-cog">
+													<h3>Beépítés</h3>
+													<p>Precíziós szakmunka</p>
+												</header>
+											</section>
+										</div>
+										<div class="col-4 col-12-medium">
+											<section>
+												<span class="image featured"><img src="images/pic03.jpg" alt="" /></span>
+												<header class="second icon solid fa-chart-bar">
+													<h3>Garancia</h3>
+													<p>Hosszú távú biztonság</p>
+												</header>
+											</section>
+										</div>
+									</div>
+								</section>
+						</div>
+					</div>
+				</div>
 
 			<div id="footer-wrapper">
 					<footer id="footer" class="container">
 						<div class="row">
-							<div class="col-6 col-12-medium">
-
+							<div class="col-12">
 								<section>
-										<h2>Kapcsolat</h2>
-										<div>
-											<div class="row">
-												<div class="col-6 col-12-small">
-													<dl class="contact">
-														<dt>Címünk</dt>
-														<dd>
-															7100 Szekszárd<br />
-															Tartsay Ipartelep 28.<br />
-															Magyarország
-														</dd>
-														<dt>Telefon</dt>
-														<dd>+36 20 418 8688<br />+36 20 278 3648</dd>
-													</dl>
-												</div>
-												<div class="col-6 col-12-small">
-													<dl class="contact">
-														<dt>Email</dt>
-														<dd><a href="mailto:alugoldkft@gmail.com">alugoldkft@gmail.com</a></dd>
-														<dt>Web</dt>
-														<dd><a href="http://www.alugold.hu">www.alugold.hu</a></dd>
-													</dl>
-												</div>
-											</div>
+									<h2>Kapcsolat</h2>
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<dl class="contact">
+												<dt>Címünk</dt>
+												<dd>7100 Szekszárd, Tartsay Ipartelep 28.</dd>
+												<dt>Telefon</dt>
+												<dd>+36 20 418 8688</dd>
+											</dl>
 										</div>
-									</section>
-
-							</div>
-							<div class="col-6 col-12-medium">
-								<section>
-									<h2>Rólunk</h2>
-									<p>Cégünk több mint két évtizede meghatározó szereplője a nyílászáró piacnak. Célunk, hogy ügyfeleinknek ne csak terméket, hanem komplex megoldást nyújtsunk, a tervezéstől a megvalósításig.</p>
+										<div class="col-6 col-12-small">
+											<dl class="contact">
+												<dt>Email</dt>
+												<dd><a href="mailto:alugoldkft@gmail.com">alugoldkft@gmail.com</a></dd>
+											</dl>
+										</div>
+									</div>
 								</section>
 							</div>
-
 							<div class="col-12">
 								<div id="copyright">
 									<ul class="menu">
-										<li>&copy; 2026 ALUGOLD Kft.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										<li>&copy; 2026 ALUGOLD Kft. Minden jog fenntartva.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 									</ul>
 								</div>
 							</div>
@@ -211,6 +211,3 @@
 
 	</body>
 </html>
-
-
-
