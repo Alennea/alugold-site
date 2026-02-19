@@ -2426,35 +2426,18 @@ input, select, textarea {
 				padding: 3em 0 1em 0;
 			}
 		/* Logo kép a helyére */
-			#logo { display:inline-block; line-height:1; }
+			/* A template szétszedésének megakadályozása */
+			#header h1 {
+			  margin: 0;
+			}
+			
+			#logo {
+			  display: inline-block;
+			}
+			
 			#logo img {
-			  display:block;
-			  height:56px;      /* desktop alap */
-			  max-height:56px;
-			  width:auto;
+			  height: 55px;   /* itt állítod a méretet */
+			  width: auto;
+			  display: block;
 			}
-			
-			/* mobilok: kisebb logó */
-			@media (max-width: 768px) {
-			  #logo img {
-			    height:40px;
-			    max-height:40px;
-			  }
-			}
-			
-			/* ha esetleg a sablonban a h1 nagy margóval rendelkezik, ezt finomíthatod: */
-			h1#logo, h1 { margin: 0; padding: 0; }
-		
-		/* Flex alapú header - jobb vertikális igazítás a logónak és navnak */
-			#header .inner {
-			  display: flex;
-			  align-items: center;
-			  justify-content: space-between; /* logó balra, nav jobbra */
-			  gap: 1rem;
-			}
-			
-			/* Ha a .inner eredetileg más elrendezésű, lehet, hogy pontosítani kell; ilyenkor
-			   teszteld, és ha gond van, visszacseréljük. */
-
-
 	}
