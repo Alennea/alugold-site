@@ -13,37 +13,30 @@
 				background-position: center;
 			}
 			
-			/* Széchenyi Terv lebegő logó (ÁTLÁTSZÓ HÁTTÉRREL) */
-.mologo {
-    bottom: 20px; /* Kicsit feljebb a képernyő aljától */
-    right: 20px;  /* Kicsit beljebb a jobb széltől */
-    z-index: 999;
-    position: fixed;
-    /* Kivettük a fehér hátteret, paddingot, árnyékot */
-    background: transparent; 
-    padding: 0;
-    box-shadow: none;
-    border-radius: 0;
-}
-.mologo img {
-    display: block;
-    max-width: 300px; /* Kicsit nagyobbra vettem, hogy jól olvasható legyen */
-    height: auto;
-    /* Egy pici áttetszőség, hogy ne legyen zavaró, de ez opcionális */
-    opacity: 0.9; 
-    transition: opacity 0.3s ease;
-}
-.mologo img:hover {
-    opacity: 1; /* Ha ráviszed az egeret, teljesen látható lesz */
-}
-
-@media (max-width: 736px) {
-    .mologo {
-        bottom: 10px;
-        right: 10px;
-    }
-    .mologo img { max-width: 180px; } /* Mobilon kisebb */
-}
+			/* Széchenyi Terv lebegő logó - TELJESEN A SAROKBAN */
+			.mologo {
+			    bottom: 0px;  /* Nulla távolság az aljától */
+			    right: 0px;   /* Nulla távolság a jobb szélétől */
+			    z-index: 999;
+			    position: fixed;
+			    background: transparent; 
+			    line-height: 0; /* Megszünteti a kép alatti láthatatlan hézagot */
+			    margin: 0;
+			    padding: 0;
+			}
+			
+			.mologo img {
+			    display: block;
+			    max-width: 300px;
+			    height: auto;
+			    /* Ha a képen magán van fehér keret, akkor ide tehetünk egy kis negatív margót: */
+			    /* margin-bottom: -5px; */
+			    /* margin-right: -5px; */
+			}
+			
+			@media (max-width: 736px) {
+			    .mologo img { max-width: 180px; }
+			}
 		</style>
 	</head>
 	<body class="homepage is-preload">
@@ -241,4 +234,5 @@
 
 	</body>
 </html>
+
 
