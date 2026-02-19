@@ -29,29 +29,36 @@
 				z-index: 2; /* Hogy a szöveg az overlay felett legyen */
 			}
 
-			/* Logo és Navbar egy vonalban */
+			/* Logo és Navbar szép egyvonalas elrendezése */
 			#header .inner {
 				display: flex;
-				align-items: center;
-				justify-content: space-between;
+				align-items: center; /* Függőlegesen középre igazítja a logót és a navot */
+				justify-content: space-between; /* A logó balra, a nav jobbra kerül */
+				flex-wrap: wrap; /* Hogy kisebb képernyőn ne folyjon ki a képből */
 			}
-			h1 {
+			
+			/* Logó beállításai */
+			#header h1 {
 				margin: 0;
+				padding: 0;
 			}
 			h1 a#logo {
 				background: url('images/logo_new_white.png') no-repeat left center;
 				background-size: contain;
 				display: block;
-				width: 250px; /* Szélesség, szükség esetén módosíthatod */
+				width: 250px; 
 				height: 60px;
 				text-indent: -9999px; /* Eltünteti a ZeroFour feliratot */
 				border: none;
 			}
 			
-			/* Navbar padding (5-5px) */
-			#nav {
-				padding-top: 5px;
-				padding-bottom: 5px;
+			/* Navbar finomhangolása (felülírja a sablon alapjait) */
+			#header #nav {
+				margin: 0; /* Sablon eredeti margójának törlése */
+				padding: 5px 0; /* 5-5px padding alul és felül */
+				position: relative;
+				top: auto; /* Törli az eredeti abszolút pozíciót */
+				right: auto;
 			}
 
 			/* Széchenyi logó a sarokba */
@@ -70,13 +77,20 @@
 				height: auto;
 			}
 			
-			/* Mobil nézet javítása a flexbox miatt */
+			/* Mobil nézet javítása (összecsúszás ellen) */
 			@media (max-width: 980px) {
 				#header .inner {
 					flex-direction: column;
+					justify-content: center;
+					padding-top: 20px;
 				}
 				h1 a#logo {
-					margin: 0 auto 20px auto;
+					margin: 0 auto 15px auto;
+					background-position: center center; /* Mobilon középre a logó */
+				}
+				#header #nav {
+					padding: 5px 0;
+					margin: 0 auto;
 				}
 				.mologo img {
 					max-width: 180px;
